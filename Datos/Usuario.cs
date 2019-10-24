@@ -18,8 +18,7 @@ namespace Datos
         [Display(Name = "Contraseña")]
         [DataType(DataType.Password)]
         public String Password { get; set; }
-        public int TipoUsuarioId { get; set; }
-        public virtual TipoUsuario TipoUsuario { get; set; }
+        public TipoDeUsuarioEnum TipoUsuario { get; set; }
 
 
     }

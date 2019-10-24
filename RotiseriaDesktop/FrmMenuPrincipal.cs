@@ -78,8 +78,10 @@ namespace RotiseriaDesktop
         {
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
+            //me fijo cual fue el usuario ingresado en frmLogin y si es
+            //gerente habilito el menú usuarios.
             usuario = frmLogin.usuario;
-            if (usuario.TipoUsuario.Nombre == "Gerente")
+            if (usuario.TipoUsuario == TipoDeUsuarioEnum.Gerente)
                 usuariosToolStripMenuItem.Enabled = true;
             else
                 usuariosToolStripMenuItem.Enabled = false;

@@ -10,6 +10,7 @@ namespace Datos.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(Datos.RotiseriaDesktopContext context)

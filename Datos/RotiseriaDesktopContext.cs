@@ -14,9 +14,10 @@ namespace Datos
         {
             Database.SetInitializer<RotiseriaDesktopContext>(
               new MigrateDatabaseToLatestVersion<RotiseriaDesktopContext, Configuration>());
+            
         }
 
-
+        
 
         public DbSet<Venta> Ventas { get; set; }
         public DbSet<DetalleVenta> DetalleVentas { get; set; }

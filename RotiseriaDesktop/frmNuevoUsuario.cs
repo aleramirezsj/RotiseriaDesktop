@@ -15,7 +15,7 @@ namespace RotiseriaDesktop
     {
         RotiseriaDesktopContext db;
         Usuario usuario;
-        TipoUsuario tipoUsuario;
+        
 
         public FrmNuevoUsuario()
         {
@@ -47,22 +47,20 @@ namespace RotiseriaDesktop
         private void cargarUsuario(int idSeleccionado)
         {
             usuario = db.Usuarios.Find(idSeleccionado);
-            this.cargarTipoUsuario(usuario.TipoUsuarioId);
+            this.cargarTipoUsuario((int)usuario.TipoUsuario);
             txtUsuario.Text = usuario.User;
             txtPassword.Text = usuario.Password;
         }
 
         private void cargarTipoUsuario(int idSeleccionado)
         {
-            cboTipoUsuario.DataSource = db.TipoUsuarios.ToList();
-            cboTipoUsuario.DisplayMember = "Nombre";
-            cboTipoUsuario.ValueMember = "Id";
-            cboTipoUsuario.SelectedValue = idSeleccionado;
+            cboTipoUsuario.DataSource = Enum.GetValues(typeof(TipoDeUsuarioEnum));
+            cboTipoUsuario.SelectedIndex = idSeleccionado;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            usuario.TipoUsuario = (TipoUsuario)cboTipoUsuario.SelectedItem;
+            usuario.TipoUsuario =(TipoDeUsuarioEnum)cboTipoUsuario.SelectedIndex+1;
             usuario.User = txtUsuario.Text;
             usuario.Password = txtPassword.Text;
 

@@ -25,14 +25,14 @@ namespace RotiseriaDesktop
         private void actualizarGrilla()
         {
             var usuariosAListar = from usuario in db.Usuarios
-                                  select new { id = usuario.Id, tipoUsuario = usuario.TipoUsuario.Nombre, user = usuario.User};
+                                  select new { id = usuario.Id, tipoUsuario = usuario.TipoUsuario.ToString(), user = usuario.User};
             gridGestionUsuario.DataSource = usuariosAListar.ToList();
         }
 
         private void actualizarGrilla(string textoBuscar)
         {
             var usuariosAListar = from usuario in db.Usuarios
-                                  select new { id = usuario.Id, tipoUsuario = usuario.TipoUsuario.Nombre, user = usuario.User};
+                                  select new { id = usuario.Id, tipoUsuario = usuario.TipoUsuario.ToString(), user = usuario.User};
             gridGestionUsuario.DataSource = usuariosAListar.Where(u => u.user.Contains(textoBuscar)).ToList();
         }
 
