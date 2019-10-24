@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace RotiseriaDesktop
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class FrmMenuPrincipal : Form
     {
-        Usuario usuario;
+        public static Usuario usuario;
 
-        public frmMenuPrincipal()
+        public FrmMenuPrincipal()
         {
             InitializeComponent();
         }

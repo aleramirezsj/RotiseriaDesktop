@@ -176,6 +176,7 @@ namespace RotiseriaDesktop
             compra.Proveedor = proveedor;
             compra.ProveedorId = proveedor.Id;
             compra.Fecha = dtpFecha.Value;
+            compra.Usuario = FrmMenuPrincipal.usuario;
             db.Compras.Add(this.compra);
             db.SaveChanges();
             

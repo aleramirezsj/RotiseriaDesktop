@@ -1,6 +1,6 @@
 ﻿namespace RotiseriaDesktop
 {
-    partial class frmMenuPrincipal
+    partial class FrmMenuPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
