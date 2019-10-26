@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,7 +63,7 @@ namespace RotiseriaDesktop
         {
             usuario.TipoUsuario =(TipoDeUsuarioEnum)cboTipoUsuario.SelectedIndex+1;
             usuario.User = txtUsuario.Text;
-            usuario.Password = txtPassword.Text;
+            usuario.Password = obtenerSha256Hash(txtPassword.Text);
 
             if (usuario.Id > 0)
             {
@@ -77,6 +78,25 @@ namespace RotiseriaDesktop
 
             db.SaveChanges();
             this.Close();
+        }
+
+        //método que 
+        private string obtenerSha256Hash(string textoAEncriptar)
+        {
+            // Create a SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // ComputeHash - returns byte array  
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(textoAEncriptar));
+
+                // Convert byte array to a string   
+                StringBuilder hashObtenido = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    hashObtenido.Append(bytes[i].ToString("x2"));
+                }
+                return hashObtenido.ToString();
+            }
         }
     }
 }
