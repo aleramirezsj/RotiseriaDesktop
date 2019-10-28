@@ -28,7 +28,7 @@ namespace RotiseriaDesktop
             string pass = obtenerSha256Hash(txtPassword.Text);
             var listaUsuarios = db.Usuarios.Where(u => u.User.Equals(txtUsuario.Text))
                                            .Where(u=>u.Password.Equals(pass)).ToList();
-            MessageBox.Show(listaUsuarios.Count.ToString());
+            //MessageBox.Show(listaUsuarios.Count.ToString());
             if (listaUsuarios.Count > 0)
             {
                 usuario = listaUsuarios.ElementAt(0);

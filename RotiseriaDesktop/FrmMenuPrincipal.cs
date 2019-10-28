@@ -89,5 +89,17 @@ namespace RotiseriaDesktop
                     usuariosToolStripMenuItem.Enabled = false;
             }
         }
+
+        private void listadoDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoProductos frmListadoProductos = new FrmListadoProductos();
+            frmListadoProductos.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmListaUsuarios frmListaUsuarios = new FrmListaUsuarios();
+            frmListaUsuarios.ShowDialog();
+        }
     }
 }
