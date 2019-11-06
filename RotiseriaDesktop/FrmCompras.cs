@@ -180,7 +180,8 @@ namespace RotiseriaDesktop
             compra.Usuario = FrmMenuPrincipal.usuario;
             db.Compras.Add(this.compra);
             db.SaveChanges();
-            
+            FrmFacturaCompra frmFacturaCompra = new FrmFacturaCompra(db,compra.Id);
+            frmFacturaCompra.ShowDialog();
             this.Close();
         }
 

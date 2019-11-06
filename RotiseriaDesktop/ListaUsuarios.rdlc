@@ -2,16 +2,16 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix2">
+      <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>15.07533cm</Width>
+              <Width>15.6045cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.09248cm</Height>
+              <Height>0.981cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -32,8 +32,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Id</rd:DefaultName>
-                          <Top>0.32314cm</Top>
-                          <Left>0.16933cm</Left>
+                          <Top>0.1905cm</Top>
+                          <Left>0.3175cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
                           <Style>
@@ -61,8 +61,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>User</rd:DefaultName>
-                          <Top>0.31609cm</Top>
-                          <Left>3.19617cm</Left>
+                          <Top>0.21167cm</Top>
+                          <Left>3.81cm</Left>
                           <Height>0.6cm</Height>
                           <Width>2.5cm</Width>
                           <ZIndex>1</ZIndex>
@@ -91,10 +91,10 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>TipoUsuario</rd:DefaultName>
-                          <Top>0.32314cm</Top>
-                          <Left>6.18067cm</Left>
+                          <Top>0.15875cm</Top>
+                          <Left>7.57767cm</Left>
                           <Height>0.6cm</Height>
-                          <Width>6.92383cm</Width>
+                          <Width>2.5cm</Width>
                           <ZIndex>2</ZIndex>
                           <Style>
                             <Border>
@@ -133,10 +133,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Usuarios</DataSetName>
-        <Top>0.17639cm</Top>
-        <Left>0.47837cm</Left>
-        <Height>1.09248cm</Height>
-        <Width>15.07533cm</Width>
+        <Top>0.22437cm</Top>
+        <Left>0.37253cm</Left>
+        <Height>0.981cm</Height>
+        <Width>15.6045cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -144,7 +144,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.49955in</Height>
+    <Height>0.53092in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
@@ -153,6 +153,53 @@
       <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Listado de Usuarios</Value>
+                  <Style>
+                    <FontFamily>Arial Narrow</FontFamily>
+                    <FontSize>22pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.98637cm</Top>
+          <Left>0.69003cm</Left>
+          <Height>0.93867cm</Height>
+          <Width>10.16233cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="Line2">
+          <Top>2.27753cm</Top>
+          <Left>0.09737cm</Left>
+          <Height>0cm</Height>
+          <Width>16.41263cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>
@@ -163,6 +210,53 @@
       <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Line Name="Line4">
+          <Top>0.37867cm</Top>
+          <Left>0.0127cm</Left>
+          <Height>0cm</Height>
+          <Width>16.4973cm</Width>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="PageNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Página: </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>0.69617cm</Top>
+          <Left>5.24087cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.5955cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>

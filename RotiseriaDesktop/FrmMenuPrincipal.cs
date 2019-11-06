@@ -88,6 +88,10 @@ namespace RotiseriaDesktop
                 else
                     usuariosToolStripMenuItem.Enabled = false;
             }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void listadoDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,6 +104,12 @@ namespace RotiseriaDesktop
         {
             FrmListaUsuarios frmListaUsuarios = new FrmListaUsuarios();
             frmListaUsuarios.ShowDialog();
+        }
+
+        private void listadoDeCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListadoCategorias frmListadoCategorias = new FrmListadoCategorias();
+            frmListadoCategorias.ShowDialog();
         }
     }
 }

@@ -46,14 +46,15 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.insertarNuevoTipoDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeTiposDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.listadoDeCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +110,8 @@
             // 
             this.categoríasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.insertarUnaNuevaCategoríaToolStripMenuItem,
-            this.gestiónDeCategoríasToolStripMenuItem});
+            this.gestiónDeCategoríasToolStripMenuItem,
+            this.listadoDeCategoríasToolStripMenuItem});
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
             this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.categoríasToolStripMenuItem.Text = "Categorías";
@@ -207,6 +209,13 @@
             this.gestiónDeUsuariosToolStripMenuItem.Text = "Gestión de usuarios";
             this.gestiónDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeUsuariosToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(281, 26);
+            this.toolStripMenuItem2.Text = "Listado de usuarios";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -224,6 +233,11 @@
             this.gestiónDeTiposDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.gestiónDeTiposDeUsuariosToolStripMenuItem.Text = "Gestión de tipos de usuarios";
             this.gestiónDeTiposDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeTiposDeUsuariosToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(278, 6);
             // 
             // salirToolStripMenuItem
             // 
@@ -246,17 +260,12 @@
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.acercaDeToolStripMenuItem.Text = "Acerca de..";
             // 
-            // toolStripMenuItem2
+            // listadoDeCategoríasToolStripMenuItem
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(281, 26);
-            this.toolStripMenuItem2.Text = "Listado de usuarios";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(278, 6);
+            this.listadoDeCategoríasToolStripMenuItem.Name = "listadoDeCategoríasToolStripMenuItem";
+            this.listadoDeCategoríasToolStripMenuItem.Size = new System.Drawing.Size(271, 26);
+            this.listadoDeCategoríasToolStripMenuItem.Text = "Listado de categorías";
+            this.listadoDeCategoríasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeCategoríasToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -304,6 +313,7 @@
         private System.Windows.Forms.ToolStripMenuItem listadoDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeCategoríasToolStripMenuItem;
     }
 }
 
